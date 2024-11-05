@@ -14,7 +14,7 @@
 ---
 
 ## Introduction
-Stufvenäs Gästgifveri is a company located in Kalmar County, Sweden, offering a spa and conference facilities. Recently, they discovered a centuries-old oak tree and constructed a trail through the forest to allow visitors to explore this natural wonder. To secure funding for the trail's maintenance, they need to demonstrate that it is being used by visitors. However, there was no existing LoRaWAN coverage in the area, requiring us to install a gateway on their premises to establish connectivity. We also install a people counter that gives us data on how many visitors are using the trail to the oak. 
+Stufvenäs Gästgifveri is a company located in Kalmar County, Sweden, offering a spa and conference facilities. Recently, they discovered a centuries-old oak tree and constructed a trail through the forest to allow visitors to explore this natural wonder. To secure funding for the trail's maintenance, they need to demonstrate that it is being used by visitors. However, there was no existing LoRaWAN coverage in the area, requiring us to install a gateway on their premises to establish connectivity. We also install a people counter that gives us data on how many visitors are using the trail to the oak. This data is sent to the Helium network and then to Datacake, where it is visualized in a dashboard. 
 
 ## Hardware Suggestion
 
