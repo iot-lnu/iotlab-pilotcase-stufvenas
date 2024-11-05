@@ -10,7 +10,8 @@
 6. [DataCake Configuration](#datacake-configuration)
     1. [Connect Chirpstack and Datacake](#connect-chirpstack-and-datacake)
     2. [Add Widgets to Your Datacake Dashboard](#add-widgets-to-your-datacake-dashboard)
-
+7. [Maintenance](#maintenance)
+    1. [Keep DC balance above 0](#keep-dc-balance-above-0)
 ---
 
 ## Introduction
@@ -89,3 +90,20 @@ Now your Datacake and Chirpstack should be connected and we should be able to ad
 
 Proceed with adding more widgets and finally it could look like this
 ![](./assets/dash.png)
+
+## Maintenance
+
+To keep the whole system running, there are a few things to keep in mind.
+
+### Keep DC balance above 0
+
+Every time a sensors sends a message (uplink), the Data Credit (DC) balance is decreased. The size of the message determines how many DCs are used. One Data Credit equals $0.00001 USD or 0,00011 SEK.
+
+| Byte Range  | Number of DCs |
+| ----------- | ------------- |
+| 0-24 bytes  | 1 DC          |
+| 25-48 bytes | 2 DC          |
+| ...         | ...           |
+| 241 bytes   | 11 DC         |
+
+This table presents the relationship between byte ranges and the corresponding number of DCs (presumably "Data Cells" or similar). More on that in the [DC Documentation page](https://docs.helium.com/tokens/data-credit/).
